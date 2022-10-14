@@ -88,7 +88,10 @@ Crie a estrutura de pastas necessária para a implementação do Redux. A estrut
 
 Salve as informações das páginas `PersonalForm` e `ProfessionalForm` na `store`
 
-👀 **De olho na dica:**  lembre-se que o `mapStateToProps` lê as informações da `store` e a função `dispatch` envia as informações para a `store`.
+👀 **De olho na dica:**  
+
+- Lembre-se que o `mapStateToProps` lê as informações da `store` e a função `dispatch` envia as informações para a `store`;
+- Lembre-se que para acessar o `dispatch` e as _props_ criadas pela função `mapDispatchToProps` você precisa _conectar_ sua aplicação ao _Redux_.
 
 ## Parte 03 - Renderizando as informações
 
