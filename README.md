@@ -43,13 +43,17 @@ Agora, basta criar o PULL REQUEST clicando no botão `Create Pull Request`.
 
 ## Começando o exercício
 
-Neste exercício será necessário implementar o Redux para dois formulários: um para dados pessoais e outro para dados profissionais; e exibi-los na tela.
+Neste exercício, será necessário implementar o Redux para dois formulários: 
 
-Os formulários já estão criados, então não é necessário criar novos arquivos além dos propostos para a execução do exercício.
+- um para dados pessoais
+- outro para dados profissionais;  
+> ambos devem ser exibidos na tela.
+
+Os formulários já estão criados, com isso não é necessário criar novos arquivos, além dos propostos para a execução do exercício.
 
 ![forms-redux](form-redux.gif)
 
-Para começar, é preciso salvar as informações de cada formulário no gerenciador de estados. Depois, numa outra página, acessem esses dados para que sejam renderizados.
+Para começar, é preciso salvar as informações de cada formulário no gerenciador de estados. Depois, em uma outra página, acessar esses dados para que sejam renderizados.
 
 Vocês precisarão de:
 
