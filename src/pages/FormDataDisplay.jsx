@@ -5,8 +5,8 @@ class FormDataDisplay extends Component {
   render() {
     // Recupere as informações do seu estado criado no Redux
     return (
-      <section className="box column is-half is-offset-one-quarter">
-        <h1 className="title">Dados Enviados</h1>
+      <section>
+        <h1>Dados Enviados</h1>
         <div>
           Nome:
           {/* { name } */}
