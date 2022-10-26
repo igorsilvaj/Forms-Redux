@@ -7,7 +7,7 @@ import FormDataDisplay from './pages/FormDataDisplay';
 class App extends Component {
   render() {
     return (
-      <main className="has-background-light my-container">
+      <main>
         <Switch>
           <Route exact path="/" component={ PersonalForm } />
           <Route path="/professionalform" component={ ProfessionalForm } />
