@@ -24,7 +24,6 @@ class ProfessionalForm extends Component {
     const { curriculum, job, description } = this.state;
     return (
       <form
-        className="box column is-half is-offset-one-quarter"
         onSubmit={ () => console.log('Envia as informações para a store') }
       >
         <h1 className="title">Informações Profissionais</h1>
