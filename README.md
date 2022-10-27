@@ -48,8 +48,6 @@ Neste exercício, será necessário implementar o Redux para dois formulários:
 - um para dados pessoais
 - outro para dados profissionais;  
 
-> ambos devem ser exibidos na tela.
-
 Os formulários já estão criados, com isso não é necessário criar novos arquivos, além dos propostos para a execução do exercício.
 
 ![forms-redux](form-redux.gif)
