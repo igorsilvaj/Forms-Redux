@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { professionalFormSubmit } from '../redux/actions';
 
 import Input from '../components/Input';
 import TextArea from '../components/TextArea';
@@ -12,13 +15,18 @@ class ProfessionalForm extends Component {
       job: '',
       description: '',
     };
-    this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange({ target }) {
+  handleChange = ({ target }) => {
     const { name, value } = target;
     this.setState({ [name]: value });
-  }
+  };
+
+  onSubmitHandle = () => {
+    const { dispatch, history } = this.props;
+    dispatch(professionalFormSubmit(this.state));
+    history.push('/formdisplay');
+  };
 
   render() {
     const { curriculum, job, description } = this.state;
@@ -55,10 +63,18 @@ class ProfessionalForm extends Component {
           type="submit"
           label="Enviar"
           moreClasses="is-fullwidth is-info"
+          onClick={ this.onSubmitHandle }
         />
       </form>
     );
   }
 }
 
-export default ProfessionalForm;
+ProfessionalForm.propTypes = {
+  dispatch: PropTypes.func.isRequired,
+  history: PropTypes.shape({
+    push: PropTypes.func.isRequired,
+  }).isRequired,
+};
+
+export default connect()(ProfessionalForm);

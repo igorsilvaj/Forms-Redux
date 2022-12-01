@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import PersonalForm from './pages/PersonalForm';
 import ProfessionalForm from './pages/ProfessionalForm';
 import FormDataDisplay from './pages/FormDataDisplay';
+import './assets/styles/App.css';
 
 class App extends Component {
   render() {

@@ -1,61 +1,78 @@
 import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
 class FormDataDisplay extends Component {
   render() {
-    // Recupere as informações do seu estado criado no Redux
+    const { personalInfo, professionalInfo } = this.props;
     return (
       <section>
         <h1>Dados Enviados</h1>
         <div>
           Nome:
-          {/* { name } */}
+          {personalInfo.name}
         </div>
         <div>
           Email:
-          {/* { email } */}
+          {personalInfo.email}
         </div>
         <div>
           CPF:
-          {/* { cpf } */}
+          {personalInfo.cpf}
         </div>
         <div>
           Endereço:
-          {/* { address } */}
+          {personalInfo.address}
         </div>
         <div>
           Cidade:
-          {/* { city } */}
+          {personalInfo.city}
         </div>
         <div>
           Estado:
-          {/* { uf } */}
+          {personalInfo.uf}
         </div>
         <div>
           Currículo:
-          {/* { curriculum } */}
+          {professionalInfo.curriculum}
         </div>
         <div>
           Cargo:
-          {/* { job } */}
+          {professionalInfo.job}
         </div>
         <div>
           Descrição do cargo:
-          {/* { description } */}
+          {professionalInfo.description}
         </div>
       </section>
     );
   }
 }
 
-// FormDataDisplay.propTypes = {
-//   name: PropTypes.string.isRequired,
-//   description: PropTypes.string.isRequired,
-//   job: PropTypes.string.isRequired,
-//   curriculum: PropTypes.string.isRequired,
-//   uf: PropTypes.string.isRequired,
-//   city: PropTypes.string.isRequired,
-//   address: PropTypes.string.isRequired,
-// };
+FormDataDisplay.defaultProps = {
+  personalInfo: {},
+  professionalInfo: {},
+};
 
-export default FormDataDisplay;
+FormDataDisplay.propTypes = {
+  personalInfo: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
+    cpf: PropTypes.string.isRequired,
+    uf: PropTypes.string.isRequired,
+    city: PropTypes.string.isRequired,
+    address: PropTypes.string.isRequired,
+  }),
+  professionalInfo: PropTypes.shape({
+    description: PropTypes.string.isRequired,
+    curriculum: PropTypes.string.isRequired,
+    job: PropTypes.string.isRequired,
+  }),
+};
+
+const mapStateToProps = (state) => ({
+  personalInfo: state.profileReducer.personalInfo,
+  professionalInfo: state.profileReducer.professionalInfo,
+});
+
+export default connect(mapStateToProps)(FormDataDisplay);
