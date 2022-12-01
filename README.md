@@ -94,7 +94,7 @@ Salve as informações das páginas `PersonalForm` e `ProfessionalForm` na `stor
 👀 **De olho na dica:**  
 
 - Lembre-se que o `mapStateToProps` lê as informações da `store` e a função `dispatch` envia as informações para a `store`;
-- Lembre-se que para acessar o `dispatch` e as _props_ criadas pela função `mapDispatchToProps` você precisa _conectar_ sua aplicação ao _Redux_.
+- Lembre-se que para acessar o `dispatch` nas _props_ e o estado mapeado pela `mapStateToProps` você precisa _conectar_ sua aplicação e o componente ao _Redux_.
 
 ## Parte 03 - Renderizando as informações
 
