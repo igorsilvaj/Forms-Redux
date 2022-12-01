@@ -6,42 +6,51 @@ class FormDataDisplay extends Component {
   render() {
     const { personalInfo, professionalInfo } = this.props;
     return (
-      <section>
+      <section className="containerData">
         <h1>Dados Enviados</h1>
         <div>
           Nome:
+          {' '}
           {personalInfo.name}
         </div>
         <div>
           Email:
+          {' '}
           {personalInfo.email}
         </div>
         <div>
           CPF:
+          {' '}
           {personalInfo.cpf}
         </div>
         <div>
           Endereço:
+          {' '}
           {personalInfo.address}
         </div>
         <div>
           Cidade:
+          {' '}
           {personalInfo.city}
         </div>
         <div>
           Estado:
+          {' '}
           {personalInfo.uf}
         </div>
         <div>
           Currículo:
+          {' '}
           {professionalInfo.curriculum}
         </div>
         <div>
           Cargo:
+          {' '}
           {professionalInfo.job}
         </div>
         <div>
           Descrição do cargo:
+          {' '}
           {professionalInfo.description}
         </div>
       </section>

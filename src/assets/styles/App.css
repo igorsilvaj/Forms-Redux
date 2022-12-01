@@ -32,9 +32,10 @@ form {
 .title {
   font-size: 2.5em;
   font-weight: 900;
+  text-align: center;
 }
 
-.container{
+.container {
   display: flex;
   flex-flow: column wrap;
   justify-content: space-around;
@@ -46,12 +47,21 @@ form {
   height: 80%;
 }
 
-.input {
+.profession {
+  height: 60%;
+}
+
+.input,
+.textarea {
   width: 95%;
   border: none;
   padding: 7px;
   border-radius: 0.5em;
+}
 
+.textarea {
+  resize: none;
+  height: 100px;
 }
 
 .label {
@@ -60,14 +70,14 @@ form {
   font-weight: 900;
 }
 
-#uf{
+#uf {
   width: 95%;
   border: none;
   padding: 7px;
   border-radius: 0.5em;
 }
 
-.button{
+.button {
   width: 70%;
   border: none;
   border-radius: 0.5em;
@@ -76,4 +86,17 @@ form {
   align-self: center;
   background-color: #00A032;
   color: white;
+}
+
+.containerData {
+  display: flex;
+  flex-flow: column wrap;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 50px;
+  border-radius: 0.5em;
+  min-height: 400px;
+}
+
+.containerData div {
+  margin: 4px 0;
 }
